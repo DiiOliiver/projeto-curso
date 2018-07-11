@@ -1,60 +1,70 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8"/>
+	<body>
+		<h2>Projeto - Curso (v.0.1)</h2>
+		<h5>Neste projeto foi usado os seguintes</h5>
+		<ol>
+			<li><a href="https://laravel.com/" target="_blank">Laravel</a></li>
+			<p>Framework MVC</p>
+			<li><a href="https://github.com/vitorec/laravel-5.5-pt-br-locale" target="_blank">vitorec/laravel-5.5-pt-br-locale</a></li>
+			<p>Esse arquivo vai servir para traduzir as telas de autentificação que o próprio laravel cria</p>
+			<li><a href="https://mailtrap.io/" target="_blank">Mailtrap</a></li>
+			<p>Depois de configurado e inserido no .ENV, permite testar o envio de e-mail (Ex: recuperação de senha)</p>
+			<li><a href="https://github.com/dompdf/dompdf" target="_blank">DomPDF</a></li>
+			<p>Permite o desenvolvimento de PDF's a partir de uma tela HTML</p>
+			<li><a href="https://viacep.com.br/" target="_blank">ViaCep</a></li>
+			<p>Webservice para consulta de CEP (Códigos de Endereçamento Postal)</p>
+			<li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+			<p>Visual da aplicação e da impressão de PDF</p>
+		</ol>
+		<h5>Outras ferramentas utilizadas</h5>
+		<ol>
+			<li><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank">Docker</a></li>
+			<p>Facilita a criação e administração de ambientes isolados. Dentro do Docker nós temos recursos isolados que utilizam bibliotecas de kernel em comum (entre host e container).</p>
+			<li><a href="http://laradock.io/" target="_blank">Laradock</a></li>
+			<p>Laradock é um importante e reconhecido projeto criado pela comunidade do PHP com configurações prontas para trabalhar com Laravel, utilizando o Docker.</p>
+			<li><a href="https://www.sublimetext.com/3" target="_blank">Sublime 3</a></li>
+			<p>Um editor de texto e código-fonte multiplataforma, escrito em linguagem C++</p>
+		</ol>
+		<h5>Desenvolvimento</h5>
+		<p>Está aplicação foi feita utilizando todos os ferramentas que o framework Laravel disponibiliza, fora as citatas acima</p>
+		<p>Os itens abaixo foram feitos utilizando o Artisan</p>
+		<ul>
+			<li>php artisan make:auth</li>
+			<li>php artisan make:model Aluno -m</li>
+			<li>php artisan migrate</li>
+			<li>php artisan make:factory AlunoFactory</li>
+			<li>php artisan make:seeder UsersTableSeeder</li>
+			<li>php artisan make:seeder AlunosTableSeeder</li>
+			<li>php artisan migrate:refresh --seed</li>
+			<li>php artisan make:request AlunoRequest</li>
+			<li>php artisan storage:link</li>
+			<li>php artisan make:controller AlunoController --resource</li>
+		</ul>
+		<p>Os itens abaixo foram feitos e preenchidos na mão</p>
+		<ul>
+			<li>routes</li>
+			<li>factories</li>
+			<li>fakers</li>
+			<li>Acessor e Mutator (dentro da model Aluno)</li>
+			<li>Prefixo do banco alterado para 'cur_' (config/database.php)</li>
+			<li>Inserção do usuário e senha do mailtrap no .ENV</li>
+		</ul>
+		<h5>Projeto foi feito nas seguintes etapas</h5>
+		<ul>
+			<li>Autenticação</li>
+			<li>Criação das tabelas</li>
+			<li>Popular tabela com usuário fake e criar um usuário adm</li>
+			<li>Criação de request para regras</li>
+			<li>Criação de controller para o CRUD</li>
+			<li>Criação das rotas</li>
+			<li>Impressão de pdf</li>
+		</ul>
+		<br/>
+		<br/>
+		<br/>
+		<h4>Atenciosamente,</h4>
+		<h3>Diego Feitosa de Oliveira</h3>
+	</body>
+</html>
