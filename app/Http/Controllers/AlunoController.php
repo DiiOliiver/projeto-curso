@@ -20,7 +20,7 @@ class AlunoController extends Controller
         $alunos = Aluno::all()->sortBy('nome');
         return view('aluno.index',compact('alunos'));
     }
-    }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -52,7 +52,7 @@ class AlunoController extends Controller
      */
     public function show($id)
     {
-        $aluno = Aluno::find($id);
+        $aluno = Aluno::where('id_aluno', $id)->first();
         return view('aluno.show', ['data' => $aluno]);
     }
 
@@ -64,7 +64,7 @@ class AlunoController extends Controller
      */
     public function edit($id)
     {
-        $aluno = Aluno::find($id);
+        $aluno = Aluno::where('id_aluno', $id)->first();
         return view('aluno.edit', ['data' => $aluno]);
     }
 
@@ -94,4 +94,12 @@ class AlunoController extends Controller
         Aluno::destroy($id);
         return redirect('alunos');
     }
+    public function gerarpdf($id)
+    {
+        $aluno = Aluno::find($id);
+     
+        return \PDF::loadView('aluno.pdf', compact('aluno'))
+                    ->setPaper('a4', 'landscape')
+                    ->stream();
+   }
 }

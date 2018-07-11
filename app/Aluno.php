@@ -6,9 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Aluno extends Model
 {
+    public $table = 'alunos';
+
     protected $fillable = [
-    	 'nome','data_nascimento','email','cep','numero','bairro','cidade','estado','logradouro','avatar','id_curso'
+    	 'nome','data_nascimento','email','cep','numero','bairro','cidade','estado','logradouro','avatar','curso'
     ];
+
+    protected $primaryKey = 'id_aluno';
 
     // A C E S S O R - Pegando informação
     public function getAvatarImageAttribute($value) {
@@ -32,4 +36,5 @@ class Aluno extends Model
     		$path = $value->storeAs($filepath,$filename);
     	}
     	$this->attributes['avatar'] = str_replace('public', 'storage', $filepath) . $filename;
+    }
 }

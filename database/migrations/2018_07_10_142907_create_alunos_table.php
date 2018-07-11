@@ -25,7 +25,7 @@ class CreateAlunosTable extends Migration
             $table->string('estado',20);
             $table->string('logradouro',50);
             $table->string('avatar', 200)->nullable();
-            $table->char('id_curso',15);
+            $table->string('curso',30);
             $table->timestamps();
         });
     }

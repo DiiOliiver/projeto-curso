@@ -22,7 +22,7 @@ class AlunosTableSeeder extends Seeder
 	       	'cidade' => 'Manaus',
 	       	'estado' => 'Amazonas',
 	       	'logradouro' => '69086001',
-            'id_curso' => '1',
+            'curso' => 'Geografia',
 	       	'created_at' => date('Y-m-d H:i:s')
         ]);
     }
